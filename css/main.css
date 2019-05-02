@@ -1,0 +1,61 @@
+body{
+	text-align: center;
+	padding: 0px;
+	margin: 0;
+}
+
+.main_text{
+	color: #4d4d4d;
+	font-family: "Lobster", serif;
+	font-size: 350%;
+}
+.secondary_text{
+	color: #4d4d4d;
+	font-family: "Arial Black", serif;
+	font-size: 150%;
+}
+.third_text{
+	font-size: 60%;
+}
+.submit_button{
+	border-radius: 10px;
+	background-color: white;
+	border: 2px solid #4d4d4d;
+	color: #4d4d4d;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.6s; /* Safari */
+    transition-duration: 0.6s;
+    cursor: pointer;
+}
+.submit_button:hover {
+  background-color: #4d4d4d;
+  color: white;
+}
+.password_visable{
+	font-size: 80%;
+}
+.input_box{
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #808080;
+	border-radius: 4px;
+}
+.input_box_chat{
+	padding: 50px;
+}
+.chat_button{
+	background-color: #fafafa;
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
+	border: none;
+}
+.my_blue{
+	color: blue;
+}
+.my_red{
+	color: red;
+}

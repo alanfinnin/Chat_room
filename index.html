@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+	
+	<link href="addons/font-awesome/css/fontawesome-5.2.0/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href="css/@media.css" rel="stylesheet" type="text/css">
+	<link rel="icon" 
+      type="image/jpg" 
+      href="images/icon.jpg" />
+	<head>
+		<title>Login</title>
+	</head>
+	
+	<body>
+	
+		<div class = "main_text">
+			<p>Login Page</p>
+		</div>
+		
+		<!--username and password input-->
+		<form class = "secondary_text" action="middle_login.php" method="post">
+			Username<br>
+				<input class = "input_box" id = "usernameID" type="text" name="username" value="">
+			<br>
+			Password<br>
+				<input class = "input_box" id = "passwordID" type="password" name="password" value="">
+				<div class = "third_text">(All passwords are hashed for extra security)</div>
+				<p class = "password_visable"><input class = "password_visable" type="checkbox" onclick="myFunction()"> Show Password</p>
+			
+		<input class = "submit_button" type="submit" value="Submit">
+		
+		</form> 
+		
+		<!--create account-->
+		<form class = "secondary_text" action="create_account.html" method="post">
+			<input class = "submit_button" type="submit" value="Create Account">
+		</form> 
+		
+		<!--making the password visable or not-->
+		<script>
+			function myFunction() {
+				var x = document.getElementById("passwordID");
+				if (x.type === "password") {
+					x.type = "text";
+				} else {
+					x.type = "password";
+				}
+			} 
+		</script>
+	</body>
+</html> 

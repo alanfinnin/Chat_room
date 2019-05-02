@@ -1,0 +1,22 @@
+@media only screen and (max-width: 768px) {
+	html{
+		text-align:center !important;
+		line-height: 1 !important;
+		margin-block-start: 0.2em;		
+		margin-block-end: 0.2em;		
+	}
+	input{
+		padding: 0;
+		width: 90%;
+	}
+   .main_text{
+		font-size: 450%;
+		padding-right: 10%;
+		padding-left: 10%;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		}
+	.secondary_text{
+		font-size: 200%;
+	}
+}
