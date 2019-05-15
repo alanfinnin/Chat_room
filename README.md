@@ -1,6 +1,6 @@
 # <h1>Chat Room</h1>
-<h2>Developed over the course of a few weeks this chat room was a
-mini project of mine outside of college</h2>
+<h2>Developed as a learning experience this chat room is an 
+ ongoing project outside of college</h2>
 
 <h3>The project in its current form contains the following "features":</h3>
 (what would be considered obvious inclusions but I didnt know what I was doing so they're features)<br>
