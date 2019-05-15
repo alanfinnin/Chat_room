@@ -4,8 +4,11 @@
 	
 	session_start();
 	$message = $_POST["chat_input"];
+	$message = strip_tags($message);
 	$sender = $_SESSION['username'];
+	$colourS = $_SESSION['colour'];
 	
+	//is the session for this user active?
 	if($_SESSION['status'] != "Active") { 
 		header("Location: index.html");
 	}
@@ -29,16 +32,16 @@
 	/*if everything is okay, the message is stringed up and sent out to the file*/
 	else if(strlen($message) !== 0){
 		$cTime = date("d-m h:i");
-		$to_save = "(" . $cTime . ") " . "<b>" . $_SESSION['username'] . "</b>: " . $message;
+		$to_save = "<br>(" . $cTime . ") " . "<b>" . $_SESSION['username'] . '</b>: <div style="color:' . $colourS  . ';">' . $message . '</div>';
 		
-		$length = strlen($to_save);
-		while($length > 70)
+		$length = strlen($message);
+		while($length > 110)
 		{
 			while($to_save[$length] !== " "){
 				$length--;
 			}
 			$to_save = substr_replace($to_save, "<br>", $length, 0);
-			$length -= 70;
+			$length -= 110;
 		}
 		$fp = fopen('info/chat.txt', 'a');
 		fwrite($fp, "\n" . $to_save);
