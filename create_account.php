@@ -1,9 +1,23 @@
 <?php 
 include "info_grabber.php";
 	$username = trim($_POST["username"]);
+	$colour = trim($_POST["colour"]);
 	//$password = $_POST["password"];
 	$password = trim(password_hash($_POST["password"], PASSWORD_DEFAULT));
 	
+	$pos = strpos($username, ",");
+    if ($pos == true) {
+        ob_start();
+		header("Location: http://www.skynet.ie/~alanfinnin/login/create_account.html");
+		ob_end_flush();
+		die();	
+    }
+	if(strlen(strip_tags($username)) !== strlen($username)){
+		ob_start();
+		header("Location: http://www.skynet.ie/~alanfinnin/login/create_account.html");
+		ob_end_flush();
+		die();	
+	}
 	/*loops through the accounts looking for a match,
 	when one is found, $check is set to 1*/
 	foreach($usernames as $value){
@@ -34,7 +48,7 @@ include "info_grabber.php";
 	}
 	/*final checks and then saves*/
 	else if(strlen($username) !== 0 || strlen($password) !== 0){
-		$to_save = $username . "," . $password;
+		$to_save = $username . "," . $password . "," . $colour;
 		
 		
 		$fp = fopen('info/users.txt', 'a');
