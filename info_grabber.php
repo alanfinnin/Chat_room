@@ -10,6 +10,7 @@ if(file_exists($to_check)){
 		}
 		$usernames = array_fill(0, $count, null);
 		$passwords = array_fill(0, $count, null);
+		$colours = array_fill(0, $count, null);
 		fclose($file_handle);
 		
 		$file_handle = fopen($to_check, "r");
@@ -22,9 +23,12 @@ if(file_exists($to_check)){
 
 			$username = $user_info_array[0];
 			$password = $user_info_array[1];
+			$colour = $user_info_array[2];
+
 
 			$usernames[$count] = $username;
 			$passwords[$count] = $password;
+			$colours[$count] = $colour;
 
 			$count++;
 		}
